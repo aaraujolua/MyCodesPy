@@ -16,9 +16,9 @@ if __name__ == '__main__':
 
         else:
             wish_products.append(product)
-            print(wish_products)
+            print(wish_products,'\n')
 
-    print(f'Checking which of these items we have in stock...')
+    print(f'\n Checking which of these items we have in stock...\n')
 
     for p in wish_products:
         if p in products_in_stock and p not in available_products:
