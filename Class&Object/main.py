@@ -18,7 +18,12 @@ class BankAccount:
             print("Sorry, you don't have enough balance to make this operation.")
         else:
             self.balance -= value
-            print(f'{self.holder} your withdrawal made successfully! Your current balance is ${self.balance}')
+            print(f'{self.holder} withdrawal made successfully! Your current balance is ${self.balance} \n')
+            
+    def deposit(self, value):
+        self.balance += value
+        print(f'{self.holder} deposit made successfully! Your current balance is ${self.balance} \n')
+        
         
         
 
@@ -33,5 +38,8 @@ if __name__ == '__main__':
     
     value_withdrawn = float(input('Enter the value you want to withdraw: '))
     luana_account.withdraw(value_withdrawn)
+    
+    value_deposit = float(input('Enter the value you want to deposit: '))
+    luana_account.deposit(value_deposit)
     
     
