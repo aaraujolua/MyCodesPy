@@ -4,26 +4,29 @@ if __name__ == '__main__':
     # 3. Caso estejam, avisar o usuário quais produtos têm e quais não têm
     # 4. Por último, exibir a lista de produtos disponíveis ordenados por ordem alfabética
 
-    products_in_stock = ['Banana', 'Tomato', 'Milk', 'Broccoli', 'Eggs']
-    wish_products = []
-    available_products = []
+    try:
+        products_in_stock = ['Banana', 'Tomato', 'Milk', 'Broccoli', 'Eggs']
+        wish_products = []
+        available_products = []
 
-    while True:
-        product = input('Type the product you are looking for (enter 0 to finish): ')
+        while True:
+            product = input('Type the product you are looking for (enter 0 to finish): ')
 
-        if product == '0':
-            break
+            if product == '0':
+                break
 
-        else:
-            wish_products.append(product)
-            print(wish_products,'\n')
+            else:
+                wish_products.append(product)
+                print(wish_products,'\n')
 
-    print(f'\n Checking which of these items we have in stock...\n')
+        print(f'\n Checking which of these items we have in stock...\n')
 
-    for p in wish_products:
-        if p in products_in_stock and p not in available_products:
-            available_products.append(p)
+        for p in wish_products:
+            if p in products_in_stock and p not in available_products:
+                available_products.append(p)
 
-    print(f'The following products are available: ')
-    available_products.sort()
-    print(available_products)
+        print(f'The following products are available: ')
+        available_products.sort()
+        print(available_products)
+    except Exception as e:
+        print('Sorry, error server')
