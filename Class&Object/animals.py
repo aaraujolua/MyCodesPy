@@ -1,3 +1,4 @@
+#Conceitos de herança
 class  Animal:
     def __init__ (self,name, weight):
         self.name = name
